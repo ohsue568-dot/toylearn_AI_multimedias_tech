@@ -1,0 +1,89 @@
+{
+  "name": "02_action_node_EditFields",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "6c6249e6-70bb-4e43-968c-abb349f7c8f1",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "url": "https://jsonplaceholder.typicode.com/todos/2",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        176,
+        0
+      ],
+      "id": "de1d7927-8414-4b0e-9ec0-3623439c503f",
+      "name": "HTTP Request"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "59dc7251-8510-4186-9feb-53ad23303af5",
+              "name": "유저아이디",
+              "value": "={{ $json.userId }}",
+              "type": "number"
+            },
+            {
+              "id": "bfe165aa-72bb-4c00-9aed-5ad9aa87eed1",
+              "name": "아이디",
+              "value": "={{ $json.id }}",
+              "type": "number"
+            },
+            {
+              "id": "ec73d270-3f4a-45d0-9b06-f7a0e19e8a2c",
+              "name": "타이틀",
+              "value": "={{ $json.title }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        384,
+        0
+      ],
+      "id": "105a86f5-bc93-49cb-96c4-95f1a8e0effd",
+      "name": "Edit Fields"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "1ecacbc7-c1b2-4378-943a-51db8a49d076",
+  "meta": {
+    "instanceId": "9d724391aad74e814f645106c13b442168f152a6072781caada997ac20b9cec0"
+  },
+  "id": "HZK5BhVimZcQKTmi",
+  "tags": []
+}
