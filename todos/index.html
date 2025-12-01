@@ -1,25 +1,150 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <title>Portfolio – Main</title>
-    <link rel="stylesheet" href="/static/css/style.css">
+  <meta charset="UTF-8">
+  <title>Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      margin: 0;
+      font-family: "Pretendard", sans-serif;
+      background: #f7f8fa;
+      color: #111;
+    }
+
+    /* 헤더 */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 48px;
+      background: rgba(255,255,255,0.7);
+      backdrop-filter: blur(10px);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      border-bottom: 1px solid #eee;
+    }
+    .logo { font-size: 20px; font-weight: 700; letter-spacing: -0.5px;}
+
+    nav a {
+      margin-left: 28px;
+      text-decoration: none;
+      color: #111;
+      font-size: 15px;
+    }
+
+    /* 히어로 */
+    .hero {
+      padding: 200px 48px 140px;
+      text-align: left;
+      max-width: 900px;
+    }
+
+    .hero h1 {
+      font-size: 54px;
+      letter-spacing: -1px;
+      line-height: 1.15;
+      margin-bottom: 24px;
+      font-weight: 800;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #444;
+      max-width: 580px;
+      line-height: 1.6;
+      margin-bottom: 44px;
+    }
+
+    .cta {
+      padding: 14px 28px;
+      background: #0066ff;
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    /* 하이라이트 프로젝트 미리보기 */
+    .feature {
+      margin: 40px 48px 120px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .feature-box {
+      background: #fff;
+      padding: 32px;
+      border-radius: 16px;
+      box-shadow: 0 10px 26px rgba(0,0,0,0.07);
+    }
+
+    .feature-box h3 {
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+
+    .feature-box p {
+      color: #555;
+    }
+
+    /* Footer */
+    footer {
+      padding: 40px;
+      text-align: center;
+      color: #666;
+      font-size: 14px;
+    }
+
+    @media (max-width: 860px) {
+      .hero { padding: 160px 32px 100px; }
+      .hero h1 { font-size: 40px; }
+      .feature { grid-template-columns: 1fr; margin: 0 32px 100px; }
+    }
+  </style>
 </head>
 <body>
-    <header class="hero">
-        <div class="hero-content">
-            <h1 class="title">오수현 · Portfolio</h1>
-            <p class="subtitle">웹 개발 · 기획 · 콘텐츠 빌더</p>
-        </div>
-    </header>
 
-    <section class="projects">
-        <h2>💼 Projects</h2>
-        <ul>
-            <li>Travel Content Platform</li>
-            <li>Policy Recommendation App</li>
-            <li>AI Content Generator</li>
-        </ul>
-    </section>
+<header>
+  <div class="logo">MY PORTFOLIO</div>
+  <nav>
+    <a href="#">About</a>
+    <a href="#">Projects</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>
+    디지털 경험을<br>
+    설계하고 만드는 사람입니다.
+  </h1>
+  <p>
+    웹 기준의 제품 개발과 시각적인 UI 설계 경험을 바탕으로  
+    사용자에게 의미 있는 인터랙션을 제공하는 것을 목표로 합니다.
+  </p>
+
+  <a href="#" class="cta">프로젝트 보러가기</a>
+</section>
+
+<section class="feature">
+  <div class="feature-box">
+    <h3>주요 프로젝트</h3>
+    <p>반응형 웹 기반 포트폴리오, CRUD 기능, 관리자 페이지, 정책 추천 모델 UI 설계 등.</p>
+  </div>
+
+  <div class="feature-box">
+    <h3>주요 기술 스택</h3>
+    <p>HTML · CSS · JavaScript · React · Firebase · Node.js</p>
+  </div>
+</section>
+
+<footer>
+  © 2025 My Portfolio — All Rights Reserved.
+</footer>
+
 </body>
 </html>
