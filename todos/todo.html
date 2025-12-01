@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Packt Todo Application</title>
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+          integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" rel="stylesheet">
+    <link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
+          integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" rel="stylesheet">
+</head>
+<body>
+<header>
+    <nav class="navar">
+        <div class="container-fluid">
+            <center>
+                <h1>Packt Todo Application</h1>
+            </center>
+        </div>
+    </nav>
+</header>
+<div class="container-fluid">
+    <main class="container">
+        <hr>
+        <section class="container-fluid">
+            <form method="post">
+                <div class="col-auto">
+                    <div class="input-group mb-3">
+                        <input aria-describedby="button-addon2" aria-label="Add a todo" class="form-control" name="item"
+                               placeholder="Purchase Packt's Python workshop course" type="text"
+                               value=""/>
+                        <input class="form-control" name="item_temp" value="temporary"/>
+                        <button class="btn btn-outline-primary" data-mdb-ripple-color="dark" id="button-addon2"
+                                type="submit">
+                            Add Todo
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+        <article class="card container-fluid">
+            <br/>
+            <h4>Todo ID: 1 </h4>
+            <p>
+                <strong>
+                    Item: Sample Todo Item
+                </strong>
+            </p>
+        </article>
+
+        <section class="container-fluid">
+            <h2 align="center">Todos</h2>
+            <br>
+            <div class="card">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        1. <a href="/todo/1"> First todo item </a>
+                    </li>
+                    <li class="list-group-item">
+                        2. <a href="/todo/2"> Second todo item </a>
+                    </li>
+                    <li class="list-group-item">
+                        3. <a href="/todo/3"> Third todo item </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+</div>
+</body>
+</html>
